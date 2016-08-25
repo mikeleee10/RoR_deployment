@@ -1,0 +1,12 @@
+<h1>Register User</h1>
+<form action="/users" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+  <p><input type="text" name="email" placeholder="Email" /></p>
+  <p><input type="text" name="name" placeholder="Name" /></p>
+  <p><input type="password" name="password" placeholder="Password" /></p>
+  <p><input type="password" name="password_confirmation" placeholder="Password Confirmation" /></p>
+  <p>
+    <input type="submit" name="submit" value="Join" />
+    <a href="/sessions/new"><button>Log in</button></a>
+  </p>
+</form>

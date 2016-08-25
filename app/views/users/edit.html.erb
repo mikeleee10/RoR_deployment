@@ -1,0 +1,18 @@
+<h1>Edit Profile</h1>
+<form action="/users" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+  <input type="hidden" name="_method" value="patch" />
+  <input type="hidden" name="id" value="<%= @user.id %>" />
+  <p><input type="text" name="email" placeholder="Email" value="<%= @user.email %>" /></p>
+  <p><input type="text" name="name" placeholder="Name" value="<%= @user.name %>"/></p>
+  <p>
+    <input type="submit" name="submit" value="Update" />
+    <!-- <a href="/users/<%= @user.id %>" data-method="delete"><button>Delete Account</button></a> -->
+    <a href="/users/<%= @user.id %>"><button>Back</button></a>
+  </p>
+</form>
+<form action="/users/<%= @user.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+  <input type="hidden" name="_method" value="delete" />
+  <input type="submit" value="Delete Account" />
+</form>
