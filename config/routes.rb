@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   # resources:sessions
   # resources:users
-  root '/sessions/new'
 
   get '/sessions/new' => 'sessions#new'
   post '/sessions' => 'sessions#create'
